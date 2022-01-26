@@ -1,0 +1,395 @@
+html, body, img, div, input, p, h1, h2, h3, h4, main {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+audio { 
+    display:none; 
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-image: url('../crypto_imagens/background-mobli.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hidden {
+    display: none;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.page-title {
+    padding: 10px;
+    color: #000000;
+    text-align: center;
+    letter-spacing: 3px;
+    background-color: white;
+    font-family: 'VT323', monospace;
+    /* text-shadow: 2px 0 0 #2e58b1, -2px 0 0 #2e58b1, 0 2px 0 #2e58b1, 0 -2px 0 #2e58b1, 1px 1px #2e58b1, -1px -1px 0 #2e58b1, 1px -1px 0 #2e58b1, -1px 1px 0 #2e58b1; */
+}
+
+#screen {
+    text-align: center;
+    padding: 20px;
+}
+
+.initiDiv {
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+    padding: 25px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    border-style: dashed
+}
+
+.game-options {
+    font-family: 'VT323', monospace;
+    height: 45px;
+    width: 120px;
+    margin: 5px;
+    border: none;
+    border-radius: 0px;
+    font-size: 25px;
+}
+
+.button {
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+  }
+  
+  @media (min-width: 768px) {
+    .button-54 {
+      padding: 0.25em 0.75em;
+    }
+  }
+
+  
+.scoreboard {
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    background: white;
+    width: 160px;
+    margin: 0 auto;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+h2 {
+    font-size: 34px;
+    letter-spacing: 3px;
+}
+
+.div-cards {
+    padding: 5px;
+    width: 250px;
+    height: 500px;
+    display: inline-block;
+    position: relative;
+}
+
+.cards {
+    width: 100%;
+}
+
+.cards-status {
+    width: 234px;
+    bottom: 123px;
+    left: 7px;
+    position: relative;
+}
+
+.cards-status input:hover {
+    background-color: #c0202057;
+}
+
+.cards-status input:focus{
+    border: 3px solid;
+    background-color: #c0202057;
+}
+
+.pace {
+    float:left;
+    box-sizing: border-box;
+    height: 35px;
+    width: 114px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.dribbling {
+    float:right;
+    box-sizing: border-box;
+    height: 35px;
+    width: 114px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.shooting {
+    float:left;
+    box-sizing: border-box;
+    height: 35px;
+    width: 114px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.defending {
+    float:right;
+    box-sizing: border-box;
+    height: 35px;
+    width: 114px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.passing {
+    float:left;
+    box-sizing: border-box;
+    height: 35px;
+    width: 114px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.physical {
+    float:right;
+    box-sizing: border-box;
+    height: 35px;
+    width: 114px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+
+
+footer {
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.563);
+    padding: 10px;
+    text-align: center;
+}
+
+.winner {
+    animation: winner 1s;
+}
+
+@keyframes winner {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+      
+      20%, 80% {
+        transform: translate3d(2px, 0, 0);
+      }
+    
+      30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+      }
+    
+      40%, 60% {
+        transform: translate3d(4px, 0, 0);
+      }
+}
+
+
+.lose {
+	-webkit-animation: lose 0.45s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: lose 0.45s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+@-webkit-keyframes lose {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(-400px);
+            transform: translateZ(-400px);
+  }
+}
+@keyframes lose {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(-400px);
+            transform: translateZ(-400px);
+  }
+}
+
+
+/* .flip {
+    animation: flip 0.3s;
+} */
+
+
+.flip{
+	-webkit-animation: flip 0.5s linear both;
+	        animation: flip 0.5s linear both;
+}
+
+@-webkit-keyframes flip {
+    0% {
+      -webkit-transform: translateX(0) rotateY(0) scale(1);
+              transform: translateX(0) rotateY(0) scale(1);
+      -webkit-transform-origin: 0% 50%;
+              transform-origin: 0% 50%;
+    }
+    50% {
+      -webkit-transform: translateX(-50%) rotateY(90deg) scale(2);
+              transform: translateX(-50%) rotateY(90deg) scale(2);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    100% {
+      -webkit-transform: translateX(-100%) rotateY(180deg) scale(1);
+              transform: translateX(-100%) rotateY(180deg) scale(1);
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+    }
+  }
+  @keyframes flip {
+    0% {
+      -webkit-transform: translateX(0) rotateY(0) scale(1);
+              transform: translateX(0) rotateY(0) scale(1);
+      -webkit-transform-origin: 0% 50%;
+              transform-origin: 0% 50%;
+    }
+    50% {
+      -webkit-transform: translateX(-50%) rotateY(90deg) scale(2);
+              transform: translateX(-50%) rotateY(90deg) scale(2);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    100% {
+      -webkit-transform: translateX(-100%) rotateY(180deg) scale(1);
+              transform: translateX(-100%) rotateY(180deg) scale(1);
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+    }
+  }
+  
+
+
+
+
+/* @keyframes flip {
+    0% { transform: scaleX(1); }
+    50% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+} */
+
+@media screen and (min-width: 700px){
+    body {
+        font-family: 'Roboto Mono', monospace;
+        background-image: url('../crypto_imagens/background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+    .page-title {
+        padding: 20px;
+        font-size: 50px;
+    }
+
+    .div-cards {
+        width: 300px;
+        height: 500px;
+        display: inline-block;
+        padding: 15px;
+        position: relative;
+    }
+
+    .cards-status {
+        width: 234px;
+        bottom: 140px;
+        left: 30px;
+        position: relative;
+    }
+
+
+    .pace {
+        float:left;
+        position: relative;
+        box-sizing: border-box;
+        height: 35px;
+        width: 114px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .dribbling {
+        float:right;
+        box-sizing: border-box;
+        height: 35px;
+        width: 114px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    
+    .shooting {
+        float:left;
+        box-sizing: border-box;
+        height: 35px;
+        width: 114px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    
+    .defending {
+        float:right;
+        box-sizing: border-box;
+        height: 35px;
+        width: 114px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    
+    .passing {
+        float:left;
+        box-sizing: border-box;
+        height: 35px;
+        width: 114px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    
+    .physical {
+        float:right;
+        box-sizing: border-box;
+        height: 35px;
+        width: 114px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+}
