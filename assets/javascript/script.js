@@ -47,6 +47,8 @@ const initialOptions = () => {
 const functionRoutes = (event) => {
   const clickedTarget = event.target;
   const clickedTargetId = clickedTarget.id;
+  const audio = new Audio('./assets/music/loopbase.ogg');
+  audio.loop = true;
 
 
   if (clickedTargetId === "startGame") {
@@ -55,12 +57,14 @@ const functionRoutes = (event) => {
     startGame();
     setWaitingTime(500, drawLetter, objetoCartas);
     addInputAtributs();
+    audio.play();
   };
   if(clickedTarget.name === "atributo"){
-    // changeClassInputAttributes('add')
+    blockAllCards();
     setWaitingTime(200, playerAttribute, {clickedTargetId, objPlayers});
     setWaitingTime(200, showCardPc, objPlayers);
     setWaitingTime(200, showScore);
+    setWaitingTime(300, unblockAllCards);
   };
 };
 
@@ -226,6 +230,16 @@ const animationEffects = (time, imgCard, className) => {
 const changeClassInputAttributes = (clas) =>{
   const divInputs = document.querySelector('.cards-status');
   divInputs.classList[clas]('hidden');
+}
+
+const blockAllCards = () =>{
+  const divInputs = document.querySelector('.cards-status');
+  divInputs.classList.add('blocked');
+}
+
+const unblockAllCards = () =>{
+  const divInputs = document.querySelector('.cards-status');
+  divInputs.classList.remove('blocked');
 }
 
 initialOptions();

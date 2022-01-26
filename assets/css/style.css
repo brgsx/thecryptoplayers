@@ -137,9 +137,12 @@ h2 {
     background-color: #c0202057;
 }
 
+.cards-status.blocked input:hover {
+    background-color: transparent;
+}
+
 .cards-status input:focus{
     border: 3px solid;
-    background-color: #c0202057;
 }
 
 .pace {
