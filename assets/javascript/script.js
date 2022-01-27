@@ -64,7 +64,7 @@ const functionRoutes = (event) => {
     setWaitingTime(200, playerAttribute, {clickedTargetId, objPlayers});
     setWaitingTime(200, showCardPc, objPlayers);
     setWaitingTime(200, showScore);
-    setWaitingTime(300, unblockAllCards);
+    setWaitingTime(5200, unblockAllCards);
   };
 };
 
@@ -150,13 +150,13 @@ const addInputAtributs = () => {
       divInputs.append(input);
   };
 
-  divInputs.classList.add("cards-status");
+  divInputs.classList.add("cards-status", "hidden");
   divCardPlayer.appendChild(divInputs);
 }
 
 function playerAttribute({clickedTargetId, objPlayers}) {
   const loseAudio = new Audio('assets/music/boo.mp3');
-  const winAudio = new Audio('assets/music/palmas2.mp3');
+  const winAudio = new Audio('assets/music/win.mp3');
   const divCards = document.getElementsByClassName("cards");
   const vencedor = document.querySelector(".winner");
   const playerSelectedAttribute = objPlayers.returnAtributs('player',clickedTargetId);
@@ -193,6 +193,8 @@ const turnCard = () => {
   animationEffects(500, divCards[1], 'flip');
   changeClassInputAttributes('add')
   objPlayers.player.amountCards--;
+  blockAllCards();
+  setWaitingTime(2000, unblockAllCards);
 
   if(objPlayers.player.amountCards > 0){
     setWaitingTime(600, drawLetter, objetoCartas);

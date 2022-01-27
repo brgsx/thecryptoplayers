@@ -10,7 +10,7 @@ audio {
 
 body {
     font-family: 'Roboto Mono', monospace;
-    background-image: url('../crypto_imagens/background-mobli.jpeg');
+    background-image: url('../crypto_imagens/background-mobli.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -143,6 +143,7 @@ h2 {
 
 .cards-status input:focus{
     border: 3px solid;
+    background-color: #c0202057;
 }
 
 .pace {
@@ -196,8 +197,6 @@ h2 {
 
 
 footer {
-    color: rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255, 0.563);
     padding: 10px;
     text-align: center;
 }
@@ -345,6 +344,9 @@ footer {
         position: relative;
     }
 
+    .cards-status.blocked input:hover {
+        background-color: transparent;
+    } 
 
     .pace {
         float:left;
