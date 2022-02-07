@@ -17,32 +17,50 @@ const objPlayers = {
   }
 };
 
-// Menu principal 
+// MAIN MENU 
 const initialOptions = () => {
   const div = document.createElement('div');
   const span = document.createElement('span');
-  const select = document.createElement('select');
-  const options1 = document.createElement('option');
-  const options2 = document.createElement('option');
-  const options3 = document.createElement('option');
+  // const select = document.createElement('select');
+  // const options1 = document.createElement('option');
+  // const options2 = document.createElement('option');
+  // const options3 = document.createElement('option');
   const button = document.createElement('button');
+  const howToPlay = document.createElement('button');
 
   div.className = 'initiDiv';
-  span.innerText = 'Deck with:';
-  select.className = 'game-options';
-  select.id = 'numberCards'
-  options1.innerText = '11 Cards';
-  options1.value = '11';
+  // span.innerText = 'Deck with:';
+  // select.className = 'game-options';
+  // select.id = 'numberCards'
+  // options1.innerText = '11 Cards';
+  // options1.value = '11';
   button.innerText = 'Start Game';
   button.id = 'startGame';
   button.className = 'button';
+  howToPlay.innerText = 'How to Play';
+  howToPlay.id = 'howToPlay';
+  howToPlay.className = 'button';
+  howToPlay.setAttribute("onclick","showPopup('popup-regras')");
 
-  select.appendChild(options1);
+  // select.appendChild(options1);
+  // div.appendChild(select);
   div.appendChild(span);
-  div.appendChild(select);
+  div.appendChild(howToPlay);
   div.appendChild(button);
   screen.appendChild(div);
 };
+// END OF MENU
+
+////// Funções do POPUPS
+// Exibe o popup com o Codepen Embed
+function showPopup(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+// Esconde o popup com o Codepen Embed
+function hidePopup(id) {
+  document.getElementById(id).style.display = "none";
+}
 
 const functionRoutes = (event) => {
   const clickedTarget = event.target;
@@ -57,6 +75,7 @@ const functionRoutes = (event) => {
     startGame();
     setWaitingTime(500, drawLetter, objetoCartas);
     addInputAtributs();
+    addPcInputAtributs();
     audio.play();
   };
   if(clickedTarget.name === "atributo"){
@@ -68,15 +87,20 @@ const functionRoutes = (event) => {
   };
 };
 
+
+// Quantidade de cartas
 const amountOfCards = ({player}) => {
-  const number = document.getElementById('numberCards');
-  player.amountCards = Number(number.value);
+  // const number = document.getElementById('numberCards');
+  // player.amountCards = Number(number.value);
+  const number = 11;
+  player.amountCards = number;
 };
+
 
 const startGame = () => {
   const scoreboard = document.createElement('div');
   const scoreboardText = document.createElement('h2');
-  const winner = document.createElement('di');
+  const winner = document.createElement('div');
   const cardPc = document.createElement('div');
   const cardPlayer = document.createElement('div');
   const imgCardPc = document.createElement('img');
@@ -105,8 +129,7 @@ const startGame = () => {
 
 const showScore = () => {
   const scoreboard = document.querySelector(".scoreboard h2");
-  scoreboard.innerText = ` ${objPlayers.player.points} X ${objPlayers.pc.points} `;
-  
+  scoreboard.innerText = ` ${objPlayers.player.points} X ${objPlayers.pc.points}`;
 };
 
 const random = (maxValue) => {
@@ -146,7 +169,7 @@ const addInputAtributs = () => {
       input.type = 'button';
       input.name = 'atributo';
       input.id = attributesValue[i];
-      input.className = attributesValue[i];
+      input.className = "statistics";
       divInputs.append(input);
   };
 
@@ -176,6 +199,26 @@ function playerAttribute({clickedTargetId, objPlayers}) {
     animationEffects(1100, divCards[1], 'winner');
   }
   vencedor.innerHTML = `<h2>${playerWinner}</h2>`;
+}
+
+
+// Adicionar atributos na cata no pc
+const addPcInputAtributs = () => {
+  const divCardPC = document.querySelector("#card-pc");
+  const attributesValue = ["pc_pace", "pc_dribbling", "pc_shooting", "pc_defending", "pc_passing", "pc_physical"];
+  const divInputs = document.createElement('div');
+
+  for (let i = 0; i < 6; i++) {
+      const input = document.createElement('input');
+      input.type = 'button';
+      input.name = 'atributo';
+      input.id = attributesValue[i];
+      input.className = attributesValue[i];
+      divInputs.append(input);
+  };
+
+  divInputs.classList.add("cards-status", "hidden");
+  divCardPC.appendChild(divInputs);
 }
 
 const showCardPc = (objPlayers) => {

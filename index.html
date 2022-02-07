@@ -2,6 +2,13 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M6M9WSS');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +23,29 @@
         <header>
             <h1 class="page-title">The CryptoPlayers</h1>
         </header>
-        <main id="screen"></main>
+        <main id="screen">
+            <div class="popup-fundo" id="popup-regras">
+                <div class="popup">
+                  <button onclick="hidePopup('popup-regras')" id="btnFechar">X</button>
+                  <div class="popup-int">
+                    <h3>How to play:</h3>
+                    <ul>
+                      <li>Click on "<b>Start Game</b>".</li>
+                      <li>Choose your favorite skill level about your CryptoPlayer, and click on it.</li>
+                        <ul>
+                            <li>There will be 11 rounds, and in each one of them you must choose a skill level.</li>
+                            <li>If your chosen player skill’s level is higher than his opponent, you win!</li>
+                            <li>If his opponent's skills level is higher: you lose!</li>
+                            <li>In case of a tie: you must choose another skill level.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <h3>Let`s Have Fun</h3>
+                    <p style="text-align:center"><a onclick="hidePopup('popup-regras')">CLOSE(X)</a></p>
+                  </div>
+                </div>
+              </div> <!-- fecha <div class="popup-fundo" id="popup-regras"> -->
+        </main>
         <footer></footer>
     </div>
     <script src="assets/javascript/cartas.js"></script>
