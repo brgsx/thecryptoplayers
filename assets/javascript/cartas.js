@@ -419,18 +419,6 @@ const objetoCartas = {
     },
     img: "assets/crypto_imagens/KrulgerGK.png"
   },
-  JamminMoo: {
-    nome: "Jammin Moo",
-    atributos: {
-      pace: 76,
-      shooting: 70,
-      passing: 67,
-      dribbling: 84,
-      defending: 31,
-      physical: 49
-    },
-    img: "assets/crypto_imagens/JamminMooCAM.png"
-  },
   MikeUh: {
     nome: "Mike Uh",
     atributos: {
@@ -479,18 +467,6 @@ const objetoCartas = {
     },
     img: "assets/crypto_imagens/WoowsicLM.png"
   },
-  YourselfShazan: {
-    nome: "Yourself Shazan",
-    atributos: {
-      pace: 73,
-      shooting: 67,
-      passing: 71,
-      dribbling: 43,
-      defending: 75,
-      physical: 75
-    },
-    img: "assets/crypto_imagens/YourselfShazanGK.png"
-  },
   Zeqiski: {
     nome: "Zeqiski",
     atributos: {
@@ -503,6 +479,271 @@ const objetoCartas = {
     },
     img: "assets/crypto_imagens/ZeqiskiLW.png"
   },
+  TheBedroon: {
+    nome: "The Bedroon",
+    atributos: {
+      pace: 64,
+      shooting: 68,
+      passing: 72,
+      dribbling: 73,
+      defending: 82,
+      physical: 80
+    },
+    img: "assets/crypto_imagens/TheBedroonCDM.png"
+  },
+  ChillOut: {
+    nome: "Chill Out",
+    atributos: {
+      pace: 79,
+      shooting: 55,
+      passing: 79,
+      dribbling: 80,
+      defending: 80,
+      physical: 78
+    },
+    img: "assets/crypto_imagens/ChillOutLWB.png"
+  },
+  AlexTerzika: {
+    nome: "Alex Terzika",
+    atributos: {
+      pace: 66,
+      shooting: 40,
+      passing: 47,
+      dribbling: 57,
+      defending: 62,
+      physical: 57
+    },
+    img: "assets/crypto_imagens/AlexTerzikaLB.png"
+  },
+  BrainDayz: {
+    nome: "Brain Dayz",
+    atributos: {
+      pace: 89,
+      shooting: 89,
+      passing: 90,
+      dribbling: 89,
+      defending: 40,
+      physical: 65
+    },
+    img: "assets/crypto_imagens/BrainDayz.png"
+  },
+  CapitanPez: {
+    nome: "CapitánPezCB",
+    atributos: {
+      pace: 54,
+      shooting: 49,
+      passing: 47,
+      dribbling: 57,
+      defending: 79,
+      physical: 73
+    },
+    img: "assets/crypto_imagens/CapitánPezCB.png"
+  },
+  DaltoValdeirST: {
+    nome: "DaltoValdeirST",
+    atributos: {
+      pace: 84,
+      shooting: 71,
+      passing: 67,
+      dribbling: 71,
+      defending: 31,
+      physical: 67
+    },
+    img: "assets/crypto_imagens/DaltoValdeirST.png"
+  },
+  DelemiST: {
+    nome: "DelemiST",
+    atributos: {
+      pace: 84,
+      shooting: 71,
+      passing: 67,
+      dribbling: 71,
+      defending: 31,
+      physical: 67
+    },
+    img: "assets/crypto_imagens/DelemiST.png"
+  },
+  GarsafetyLM: {
+    nome: "GarsafetyLM",
+    atributos: {
+      pace: 75,
+      shooting: 42,
+      passing: 61,
+      dribbling: 67,
+      defending: 66,
+      physical: 74
+    },
+    img: "assets/crypto_imagens/GarsafetyLM.png"
+  },
+  HassinCDM: {
+    nome: "HassinCDM",
+    atributos: {
+      pace: 71,
+      shooting: 52,
+      passing: 71,
+      dribbling: 60,
+      defending: 76,
+      physical: 70
+    },
+    img: "assets/crypto_imagens/HassinCDM.png"
+  },
+  JohnMayaLB: {
+    nome: "JohnMayaLB",
+    atributos: {
+      pace: 67,
+      shooting: 76,
+      passing: 81,
+      dribbling: 86,
+      defending: 50,
+      physical: 60
+    },
+    img: "assets/crypto_imagens/JohnMayaLB.png"
+  },
+  K9HertzCAM: {
+    nome: "K9HertzCAM",
+    atributos: {
+      pace: 82,
+      shooting: 78,
+      passing: 79,
+      dribbling: 84,
+      defending: 45,
+      physical: 66
+    },
+    img: "assets/crypto_imagens/K9HertzCAM.png"
+  },
+  MarkRoquefortLM: {
+    nome: "MarkRoquefortLM",
+    atributos: {
+      pace: 90,
+      shooting: 84,
+      passing: 79,
+      dribbling: 84,
+      defending: 43,
+      physical: 77
+    },
+    img: "assets/crypto_imagens/MarkRoquefortLM.png"
+  },
+  MeuniverRB: {
+    nome: "MeuniverRB",
+    atributos: {
+      pace: 73,
+      shooting: 74,
+      passing: 72,
+      dribbling: 72,
+      defending: 73,
+      physical: 80
+    },
+    img: "assets/crypto_imagens/MeuniverRB.png"
+  },
+  MeuniverRB: {
+    nome: "MousseDiLW",
+    atributos: {
+      pace: 94,
+      shooting: 67,
+      passing: 73,
+      dribbling: 85,
+      defending: 41,
+      physical: 53
+    },
+    img: "assets/crypto_imagens/MousseDiLW.png"
+  },
+  NikoTavarezST: {
+    nome: "NikoTavarezST",
+    atributos: {
+      pace: 87,
+      shooting: 71,
+      passing: 64,
+      dribbling: 82,
+      defending: 45,
+      physical: 60
+    },
+    img: "assets/crypto_imagens/NikoTavarezST.png"
+  },
+  NoalingoLW: {
+    nome: "NoalingoLW",
+    atributos: {
+      pace: 87,
+      shooting: 71,
+      passing: 64,
+      dribbling: 82,
+      defending: 45,
+      physical: 60
+    },
+    img: "assets/crypto_imagens/NoalingoLW.png"
+  },
+  SangWhoLM: {
+    nome: "SangWhoLM",
+    atributos: {
+      pace: 82,
+      shooting: 64,
+      passing: 70,
+      dribbling: 68,
+      defending: 65,
+      physical: 62
+    },
+    img: "assets/crypto_imagens/SangWhoLM.png"
+  },
+  ShospartehCB: {
+    nome: "ShospartehCB",
+    atributos: {
+      pace: 73,
+      shooting: 54,
+      passing: 48,
+      dribbling: 56,
+      defending: 72,
+      physical: 71
+    },
+    img: "assets/crypto_imagens/ShospartehCB.png"
+  },
+  ThunderStormCAM: {
+    nome: "ThunderStormCAM",
+    atributos: {
+      pace: 81,
+      shooting: 65,
+      passing: 66,
+      dribbling: 73,
+      defending: 46,
+      physical: 59
+    },
+    img: "assets/crypto_imagens/ThunderStormCAM.png"
+  },
+  WladusanST: {
+    nome: "WladusanST",
+    atributos: {
+      pace: 86,
+      shooting: 89,
+      passing: 70,
+      dribbling: 85,
+      defending: 35,
+      physical: 86
+    },
+    img: "assets/crypto_imagens/WladusanST.png"
+  },
+  YeahdaniCB: {
+    nome: "YeahdaniCB",
+    atributos: {
+      pace: 74,
+      shooting: 50,
+      passing: 47,
+      dribbling: 56,
+      defending: 74,
+      physical: 73
+    },
+    img: "assets/crypto_imagens/YeahdaniCB.png"
+  },
+  ZeqiskiST: {
+    nome: "ZeqiskiST",
+    atributos: {
+      pace: 71,
+      shooting: 67,
+      passing: 56,
+      dribbling: 67,
+      defending: 22,
+      physical: 66
+    },
+    img: "assets/crypto_imagens/ZeqiskiST.png"
+  },
+
 
   // test cards
   Teste1: {
